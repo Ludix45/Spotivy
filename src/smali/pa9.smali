@@ -711,9 +711,8 @@
     :goto_d
     iput-object v9, v1, Lpa9;->x:Lti2;
 
-    iget-boolean v0, v1, Lpa9;->w:Z
-
-    if-eqz v0, :cond_d
+    # debug: DevTools della WebView sempre attivo (ispezione da adb, indipendente dalle preferenze)
+    const/4 v5, 0x1
 
     invoke-static {v5}, Landroid/webkit/WebView;->setWebContentsDebuggingEnabled(Z)V
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlist</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s brano</item>
+        <item quantity="other">%1$s brani</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d brano di %2$s</item>
+        <item quantity="other">%1$d brani di %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Avanti di %d secondo</item>
+        <item quantity="other">Avanti di %d secondi</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Indietro di %d secondo</item>
+        <item quantity="other">Indietro di %d secondi</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d voto positivo</item>
+        <item quantity="other">%1$d voti positivi</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d brano</item>
+        <item quantity="other">%1$d brani</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d brano</item>
+        <item quantity="other">%d brani</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d follower</item>
+        <item quantity="other">%1$d follower</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d salvataggio</item>
+        <item quantity="other">%1$,d salvataggi</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">%d brano aggiunto alla coda</item>
+        <item quantity="other">%d brani aggiunti alla coda</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d brano verrà riprodotto dopo</item>
+        <item quantity="other">%d brani verranno riprodotti dopo</item>
+    </plurals>
+</resources>

@@ -1,0 +1,33 @@
+--- a/smali/oa9.smali
++++ b/smali/oa9.smali
+@@ -213,6 +213,30 @@
+ 
+     sput-boolean v0, Loa9;->z:Z
+ 
++    # login: UA Chrome mobile coerente col motore della WebView, senza il token "wv".
++    # Spotify usa reCAPTCHA v3 invisibile: una WebView riconoscibile fa fallire il primo Continue.
++    invoke-virtual {p1}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
++
++    move-result-object v0
++
++    invoke-static {v0}, Landroid/webkit/WebSettings;->getDefaultUserAgent(Landroid/content/Context;)Ljava/lang/String;
++
++    move-result-object v0
++
++    const-string v2, "; wv"
++
++    const-string v3, ""
++
++    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v0
++
++    const-string v2, "Version/4.0 "
++
++    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v0
++
+     invoke-virtual {v1, v0}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
+ 
+     goto :goto_0

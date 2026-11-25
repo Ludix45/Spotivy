@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s seznam predvajanja</item>
+        <item quantity="two">%1$s seznama predvajanja</item>
+        <item quantity="few">%1$s seznami predvajanja</item>
+        <item quantity="other">%1$s seznamov predvajanja</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s skladba</item>
+        <item quantity="two">%1$s skladbi</item>
+        <item quantity="few">%1$s skladbe</item>
+        <item quantity="other">%1$s skladb</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Premik naprej za %d sekundo</item>
+        <item quantity="two">Premik naprej za %d sekundi</item>
+        <item quantity="few">Premik naprej za %d sekunde</item>
+        <item quantity="other">Premik naprej za %d sekund</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Premik nazaj za %d sekundo</item>
+        <item quantity="two">Premik nazaj za %d sekundi</item>
+        <item quantity="few">Premik nazaj za %d sekunde</item>
+        <item quantity="other">Premik nazaj za %d sekund</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d skladba</item>
+        <item quantity="two">%1$d skladbi</item>
+        <item quantity="few">%1$d skladbe</item>
+        <item quantity="other">%1$d skladb</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d-krat shranjeno</item>
+        <item quantity="two">%1$,d-krat shranjeno</item>
+        <item quantity="few">%1$,d-krat shranjeno</item>
+        <item quantity="other">%1$,d-krat shranjeno</item>
+    </plurals>
+</resources>

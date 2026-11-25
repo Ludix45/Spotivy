@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s spilunarlisti</item>
+        <item quantity="other">%1$s spilunarlistar</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s lag</item>
+        <item quantity="other">%1$s lög</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Spóla áfram um %d sekúndu</item>
+        <item quantity="other">Spóla áfram um %d sekúndur</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Spóla til baka um %d sekúndu</item>
+        <item quantity="other">Spóla til baka um %d sekúndur</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d lag</item>
+        <item quantity="other">%1$d lög</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">Vistað %1$,d sinni</item>
+        <item quantity="other">Vistað %1$,d sinnum</item>
+    </plurals>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">‏%1$s فهرست پخش</item>
+        <item quantity="other">‏%1$s فهرست پخش</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s آهنگ</item>
+        <item quantity="other">%1$s آهنگ</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d ثانیه سریع به‌جلو بردن</item>
+        <item quantity="other">%d ثانیه سریع به‌جلو بردن</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d ثانیه به‌عقب بردن</item>
+        <item quantity="other">%d ثانیه به‌عقب بردن</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">‫‏%1$d آهنگ</item>
+        <item quantity="other">‏%1$d آهنگ</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">‏%1$,d ذخیره</item>
+        <item quantity="other">‏%1$,d ذخیره</item>
+    </plurals>
+</resources>

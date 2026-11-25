@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlists</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s song</item>
+        <item quantity="other">%1$s songs</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d song by %2$s</item>
+        <item quantity="other">%1$d songs by %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Fast forward %d second</item>
+        <item quantity="other">Fast forward %d seconds</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d upvote</item>
+        <item quantity="other">%1$d upvotes</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%d song</item>
+        <item quantity="other">%d songs</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d track</item>
+        <item quantity="other">%d tracks</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d follower</item>
+        <item quantity="other">%1$d followers</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d save</item>
+        <item quantity="other">%1$,d saves</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">%d song added to queue</item>
+        <item quantity="other">%d songs added to queue</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d song will play next</item>
+        <item quantity="other">%d songs will play next</item>
+    </plurals>
+</resources>

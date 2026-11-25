@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s plejlista</item>
+        <item quantity="few">%1$s plejliste</item>
+        <item quantity="other">%1$s plejlista</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s pesma</item>
+        <item quantity="few">%1$s pesme</item>
+        <item quantity="other">%1$s pesama</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Премотајте %d секунду унапред</item>
+        <item quantity="few">Премотајте %d секунде унапред</item>
+        <item quantity="other">Премотајте %d секунди унапред</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Премотајте %d секунду уназад</item>
+        <item quantity="few">Премотајте %d секунде уназад</item>
+        <item quantity="other">Премотајте %d секунди уназад</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d pesma</item>
+        <item quantity="few">%1$d pesme</item>
+        <item quantity="other">%1$d pesama</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d čuvanje</item>
+        <item quantity="few">%1$,d čuvanja</item>
+        <item quantity="other">%1$,d čuvanja</item>
+    </plurals>
+</resources>

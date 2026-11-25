@@ -1,0 +1,13 @@
+# toolchain scaricata (apktool, jadx, build-tools)
+.tools
+# workdir di decompilazione/ricompilazione
+work/
+# chiavi di firma: MAI committare
+keys/
+# artefatti
+dist/
+build/
+*.apk
+*.keystore
+*.jks
+.tools

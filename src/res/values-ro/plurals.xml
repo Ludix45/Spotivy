@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="few">%1$s playlisturi</item>
+        <item quantity="other">%1$s de playlisturi</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s melodie</item>
+        <item quantity="few">%1$s melodii</item>
+        <item quantity="other">%1$s de melodii</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Derulează rapid înainte cu %d secundă</item>
+        <item quantity="few">Derulează rapid înainte cu %d secunde</item>
+        <item quantity="other">Derulează rapid înainte cu %d de secunde</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Derulează înapoi cu %d secundă</item>
+        <item quantity="few">Derulează înapoi cu %d secunde</item>
+        <item quantity="other">Derulează înapoi cu %d de secunde</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d melodie</item>
+        <item quantity="few">%1$d melodii</item>
+        <item quantity="other">%1$d de melodii</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d salvare</item>
+        <item quantity="few">%1$,d salvări</item>
+        <item quantity="other">%1$,d de salvări</item>
+    </plurals>
+</resources>

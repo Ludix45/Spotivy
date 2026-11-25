@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s plejlista</item>
+        <item quantity="few">%1$s plejliste</item>
+        <item quantity="other">%1$s plejlisti</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s pjesma</item>
+        <item quantity="few">%1$s pjesme</item>
+        <item quantity="other">%1$s pjesama</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Premotavanje %d sekundu naprijed</item>
+        <item quantity="few">Premotavanje %d sekunde naprijed</item>
+        <item quantity="other">Premotavanje %d sekundi naprijed</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Premotavanje %d sekundu nazad</item>
+        <item quantity="few">Premotavanje %d sekunde nazad</item>
+        <item quantity="other">Premotavanje %d sekundi nazad</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d pjesma</item>
+        <item quantity="few">%1$d pjesme</item>
+        <item quantity="other">%1$d pjesama</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d pohranjivanje</item>
+        <item quantity="few">%1$,d pohranjivanja</item>
+        <item quantity="other">%1$,d pohranjivanja</item>
+    </plurals>
+</resources>

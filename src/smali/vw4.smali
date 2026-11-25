@@ -1,0 +1,254 @@
+.class public final Lvw4;
+.super Lih8;
+.source "SourceFile"
+
+# interfaces
+.implements Lku2;
+
+
+# instance fields
+.field final synthetic $backToAccount:Lww4;
+
+.field label:I
+
+.field final synthetic this$0:Lapp/myspoti/MainActivity;
+
+
+# direct methods
+.method public constructor <init>(Lapp/myspoti/MainActivity;Lww4;Lt51;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lapp/myspoti/MainActivity;",
+            "Lww4;",
+            "Lt51;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lvw4;->this$0:Lapp/myspoti/MainActivity;
+
+    iput-object p2, p0, Lvw4;->$backToAccount:Lww4;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lih8;-><init>(ILt51;)V
+
+    return-void
+.end method
+
+.method public static synthetic d(Lapp/myspoti/MainActivity;)Z
+    .locals 0
+
+    invoke-static {p0}, Lvw4;->invokeSuspend$lambda$0(Lapp/myspoti/MainActivity;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private static final invokeSuspend$lambda$0(Lapp/myspoti/MainActivity;)Z
+    .locals 1
+
+    sget v0, Lapp/myspoti/MainActivity;->K:I
+
+    invoke-virtual {p0}, Lapp/myspoti/MainActivity;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lapp/myspoti/MainActivity;->z:Lk16;
+
+    invoke-virtual {p0}, Lk16;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lt51;)Lt51;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lt51;",
+            ")",
+            "Lt51;"
+        }
+    .end annotation
+
+    new-instance p1, Lvw4;
+
+    iget-object v0, p0, Lvw4;->this$0:Lapp/myspoti/MainActivity;
+
+    iget-object p0, p0, Lvw4;->$backToAccount:Lww4;
+
+    invoke-direct {p1, v0, p0, p2}, Lvw4;-><init>(Lapp/myspoti/MainActivity;Lww4;Lt51;)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 13
+    check-cast p1, Ls71;
+
+    check-cast p2, Lt51;
+
+    invoke-virtual {p0, p1, p2}, Lvw4;->invoke(Ls71;Lt51;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Ls71;Lt51;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ls71;",
+            "Lt51;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lvw4;->create(Ljava/lang/Object;Lt51;)Lt51;
+
+    move-result-object p0
+
+    check-cast p0, Lvw4;
+
+    sget-object p1, Lb29;->a:Lb29;
+
+    invoke-virtual {p0, p1}, Lvw4;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lt71;->COROUTINE_SUSPENDED:Lt71;
+
+    iget v1, p0, Lvw4;->label:I
+
+    sget-object v2, Lb29;->a:Lb29;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v4, :cond_0
+
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    const-string p0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-static {p0}, Lrs1;->q(Ljava/lang/String;)V
+
+    return-object v3
+
+    :cond_1
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvw4;->this$0:Lapp/myspoti/MainActivity;
+
+    new-instance v1, Lsw4;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v1, p1, v5}, Lsw4;-><init>(Lapp/myspoti/MainActivity;B)V
+
+    invoke-static {v1}, Lri2;->n0(Lgu2;)Lt17;
+
+    move-result-object p1
+
+    sget-object v1, Lqj5;->a:Lqj5;
+
+    invoke-static {}, Lqj5;->c()Lpa9;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lpa9;->C:Ll55;
+
+    iget-object v1, v1, Ll55;->t:Ljava/lang/Object;
+
+    check-cast v1, Lac8;
+
+    new-instance v5, Lvw4$a;
+
+    invoke-direct {v5, v3}, Lvw4$a;-><init>(Lt51;)V
+
+    new-instance v6, Ltf;
+
+    iget-object v7, p0, Lvw4;->$backToAccount:Lww4;
+
+    const/16 v8, 0xa
+
+    invoke-direct {v6, v7, v8}, Ltf;-><init>(Ljava/lang/Object;B)V
+
+    iput v4, p0, Lvw4;->label:I
+
+    const/4 v7, 0x2
+
+    new-array v7, v7, [Ldl2;
+
+    const/4 v8, 0x0
+
+    aput-object p1, v7, v8
+
+    aput-object v1, v7, v4
+
+    new-instance p1, Lsm2;
+
+    invoke-direct {p1, v5, v3}, Lsm2;-><init>(Lnu2;Lt51;)V
+
+    invoke-static {v6, v7, p1, p0}, Lu81;->j(Lel2;[Ldl2;Lnu2;Lt51;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p0, v2
+
+    :goto_0
+    if-ne p0, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v2
+.end method

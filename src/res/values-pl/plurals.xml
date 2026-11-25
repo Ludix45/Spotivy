@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlista</item>
+        <item quantity="few">%1$s playlisty</item>
+        <item quantity="many">%1$s playlist</item>
+        <item quantity="other">%1$s playlisty</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s utwór</item>
+        <item quantity="few">%1$s utwory</item>
+        <item quantity="many">%1$s utworów</item>
+        <item quantity="other">%1$s utworu</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d utwór • %2$s</item>
+        <item quantity="few">%1$d utwory • %2$s</item>
+        <item quantity="many">%1$d utworów • %2$s</item>
+        <item quantity="other">%1$d utworu • %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Przewiń do przodu o %d sekundę</item>
+        <item quantity="few">Przewiń do przodu o %d sekundy</item>
+        <item quantity="many">Przewiń do przodu o %d sekund</item>
+        <item quantity="other">Przewiń do przodu o %d sekundy</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Przewiń do tyłu o %d sekundę</item>
+        <item quantity="few">Przewiń do tyłu o %d sekundy</item>
+        <item quantity="many">Przewiń do tyłu o %d sekund</item>
+        <item quantity="other">Przewiń do tyłu o %d sekundy</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d głos na tak</item>
+        <item quantity="few">%1$d głosy na tak</item>
+        <item quantity="many">%1$d głosów na tak</item>
+        <item quantity="other">%1$d głosu na tak</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d utwór</item>
+        <item quantity="few">%1$d utwory</item>
+        <item quantity="many">%1$d utworów</item>
+        <item quantity="other">%1$d utworu</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d utwór</item>
+        <item quantity="few">%d utwory</item>
+        <item quantity="many">%d utworów</item>
+        <item quantity="other">%d utworu</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d obserwujący</item>
+        <item quantity="few">%1$d obserwujących</item>
+        <item quantity="many">%1$d obserwujących</item>
+        <item quantity="other">%1$d obserwującego</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d zapis</item>
+        <item quantity="few">%1$,d zapisy</item>
+        <item quantity="many">%1$,d zapisów</item>
+        <item quantity="other">%1$,d zapisu</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">Dodano %d utwór do kolejki</item>
+        <item quantity="few">Dodano %d utwory do kolejki</item>
+        <item quantity="many">Dodano %d utworów do kolejki</item>
+        <item quantity="other">Dodano %d utworu do kolejki</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d utwór zagra jako następny</item>
+        <item quantity="few">%d utwory zagrają jako następne</item>
+        <item quantity="many">%d utworów zagra jako następne</item>
+        <item quantity="other">%d utworu zagra jako następne</item>
+    </plurals>
+</resources>

@@ -1,0 +1,56 @@
+.class public Lq54;
+.super Ljava/lang/Exception;
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x1L
+
+
+# instance fields
+.field private final charOffset:I
+
+.field private final charPos:I
+
+.field private final linePos:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Exception;Ljava/lang/String;III)V
+    .locals 0
+
+    invoke-direct {p0, p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iput p3, p0, Lq54;->linePos:I
+
+    iput p4, p0, Lq54;->charPos:I
+
+    iput p5, p0, Lq54;->charOffset:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getCharOffset()I
+    .locals 0
+
+    iget p0, p0, Lq54;->charOffset:I
+
+    return p0
+.end method
+
+.method public getCharPosition()I
+    .locals 0
+
+    iget p0, p0, Lq54;->charPos:I
+
+    return p0
+.end method
+
+.method public getLinePosition()I
+    .locals 0
+
+    iget p0, p0, Lq54;->linePos:I
+
+    return p0
+.end method

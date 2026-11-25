@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="other">%1$s 個播放清單</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="other">%1$s 首歌曲</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">快轉 %d 秒</item>
+        <item quantity="other">快轉 %d 秒</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">倒轉 %d 秒</item>
+        <item quantity="other">倒轉 %d 秒</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="other">%1$d 首歌曲</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="other">儲存次數：%1$,d</item>
+    </plurals>
+</resources>

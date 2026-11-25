@@ -1,0 +1,129 @@
+.class public final Lkj5;
+.super Lih8;
+.source "SourceFile"
+
+# interfaces
+.implements Lhu2;
+
+
+# instance fields
+.field label:I
+
+
+# direct methods
+.method public constructor <init>(Lt51;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lt51;",
+            ")V"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0, p1}, Lih8;-><init>(ILt51;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Lt51;)Lt51;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lt51;",
+            ")",
+            "Lt51;"
+        }
+    .end annotation
+
+    new-instance p0, Lkj5;
+
+    invoke-direct {p0, p1}, Lkj5;-><init>(Lt51;)V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 13
+    check-cast p1, Lt51;
+
+    invoke-virtual {p0, p1}, Lkj5;->invoke(Lt51;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Lt51;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lt51;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lkj5;->create(Lt51;)Lt51;
+
+    move-result-object p0
+
+    check-cast p0, Lkj5;
+
+    sget-object p1, Lb29;->a:Lb29;
+
+    invoke-virtual {p0, p1}, Lkj5;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Lt71;->COROUTINE_SUSPENDED:Lt71;
+
+    iget p0, p0, Lkj5;->label:I
+
+    if-nez p0, :cond_0
+
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    sget-object p0, Lqj5;->a:Lqj5;
+
+    invoke-static {}, Lqj5;->c()Lpa9;
+
+    move-result-object p0
+
+    iget-object p1, p0, Lpa9;->b:Landroid/os/Handler;
+
+    new-instance v0, Lea9;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p0, v1}, Lea9;-><init>(Lpa9;B)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    sget-object p0, Lb29;->a:Lb29;
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-static {p0}, Lrs1;->q(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method

@@ -1,0 +1,7 @@
+.class public interface abstract Lsi6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls71;
+.implements Lwe7;

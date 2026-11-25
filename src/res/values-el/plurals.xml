@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlist</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s τραγούδι</item>
+        <item quantity="other">%1$s τραγούδια</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d τραγούδι από %2$s</item>
+        <item quantity="other">%1$d τραγούδια από %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Γρήγορη προώθηση κατά %d δευτερόλεπτο</item>
+        <item quantity="other">Γρήγορη προώθηση κατά %d δευτερόλεπτα</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτο</item>
+        <item quantity="other">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτα</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d θετική ψήφος</item>
+        <item quantity="other">%1$d θετικές ψήφοι</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d τραγούδι</item>
+        <item quantity="other">%1$d τραγούδια</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d κομμάτι</item>
+        <item quantity="other">%d κομμάτια</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d ακόλουθος</item>
+        <item quantity="other">%1$d ακόλουθοι</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d αποθήκευση</item>
+        <item quantity="other">%1$,d αποθηκεύσεις</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">Προστέθηκε %d τραγούδι στην ουρά</item>
+        <item quantity="other">Προστέθηκαν %d τραγούδια στην ουρά</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d τραγούδι θα παίξει μετά</item>
+        <item quantity="other">%d τραγούδια θα παίξουν μετά</item>
+    </plurals>
+</resources>

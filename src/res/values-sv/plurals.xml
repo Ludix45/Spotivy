@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s spellista</item>
+        <item quantity="other">%1$s spellistor</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s låt</item>
+        <item quantity="other">%1$s låtar</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Spola framåt %d sekund</item>
+        <item quantity="other">Spola framåt %d sekunder</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Spola tillbaka %d sekund</item>
+        <item quantity="other">Spola tillbaka %d sekunder</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d låt</item>
+        <item quantity="other">%1$d låtar</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d sparning</item>
+        <item quantity="other">%1$,d sparningar</item>
+    </plurals>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s प्लेलिस्ट</item>
+        <item quantity="other">%1$s प्लेलिस्टहरू</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s गीत</item>
+        <item quantity="other">%1$s वटा गीतहरू</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d सेकेन्ड फास्ट फर्वार्ड गर्नुहोस्</item>
+        <item quantity="other">%d सेकेन्ड फास्ट फर्वार्ड गर्नुहोस्</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d सेकेन्ड रिवाइन्ड गर्नुहोस्</item>
+        <item quantity="other">%d सेकेन्ड रिवाइन्ड गर्नुहोस्</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d गीत</item>
+        <item quantity="other">%1$d वटा गीतहरू</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d वटा सेभ</item>
+        <item quantity="other">%1$,d वटा सेभ</item>
+    </plurals>
+</resources>

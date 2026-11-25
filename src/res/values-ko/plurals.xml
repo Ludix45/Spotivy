@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="other">플레이리스트 %1$s개</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="other">곡 %1$s개</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d초 빨리 감기</item>
+        <item quantity="other">%d초 빨리 감기</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d초 되감기</item>
+        <item quantity="other">%d초 되감기</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="other">%1$d곡</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="other">저장 횟수: %1$,d</item>
+    </plurals>
+</resources>

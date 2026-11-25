@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s speellys</item>
+        <item quantity="other">%1$s speellyste</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s liedjie</item>
+        <item quantity="other">%1$s liedjies</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Spoel %d sekonde vinnig vorentoe</item>
+        <item quantity="other">Spoel %d sekondes vinnig vorentoe</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Spoel %d sekonde terug</item>
+        <item quantity="other">Spoel %d sekondes terug</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d liedjie</item>
+        <item quantity="other">%1$d liedjies</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d keer gestoor</item>
+        <item quantity="other">%1$,d keer gestoor</item>
+    </plurals>
+</resources>

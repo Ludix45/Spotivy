@@ -1,0 +1,61 @@
+--- a/unknown/bridge/player-bridge.js
++++ b/unknown/bridge/player-bridge.js
+@@ -331,7 +331,9 @@
+   // The element volume the page player itself sets for its volume (cubic curve or not).
+   const ownLevel = player => {
+     const v = typeof player._playerVolume === 'number' ? player._playerVolume : 1;
+-    return player._cubicVolume ? v * v * v : v;
++    const level = player._cubicVolume ? v * v * v : v;
++    // Never 0: Chromium pauses a hidden page's media started at volume 0 (see 'media.mute').
++    return Math.min(1, Math.max(SILENT, level));
+   };
+ 
+   // --- commands -------------------------------------------------------------
+@@ -341,6 +343,30 @@
+     return services;
+   };
+ 
++  // A play or a resume that Spotify acknowledges and never delivers: seen 24/11 on a free
++  // account, the command answered 200 in 8 ms, the page stayed paused and no audio was ever
++  // asked for. The page's own request is then sent again straight out (the host's
++  // document-start hook leaves a command alone once window.__mspDirect is set, exactly as it
++  // does after a refused one), and kept that way while the music plays.
++  let mspStartWatch = 0;
++  const mspHearsAudio = async () => {
++    const player = await localPlayer().catch(() => null);
++    const els = new Set([...(window.__mspMedia || []), ...document.querySelectorAll('audio, video')]);
++    if (player && player._player instanceof HTMLMediaElement) els.add(player._player);
++    return [...els].some(el => !el.paused && !el.ended && el.readyState > 2);
++  };
++  const mspStarted = again => {
++    const answer = again();
++    clearTimeout(mspStartWatch);
++    mspStartWatch = setTimeout(async () => {
++      if (window.__mspDirect || await mspHearsAudio()) return;
++      window.__mspDirect = true;
++      try { const sent = again(); if (sent && sent.catch) sent.catch(() => {}); } catch (e) { /* the host's own retry stays */ }
++      mspStartWatch = setTimeout(async () => { if (!(await mspHearsAudio())) window.__mspDirect = false; }, 12000);
++    }, 4000);
++    return answer;
++  };
++
+   // --- ads ------------------------------------------------------------------
+   // The page's own ad managers drive the audio ads and their mute. SpotX patches the bundled
+   // web player to force `adsEnabled` off; the very same managers are reachable at runtime through
+@@ -410,10 +436,13 @@
+       const context = Array.isArray(a.order) && a.order.length
+         ? { uri: a.contextUri, url: 'context://' + a.contextUri + '?order=' + Date.now(), pages: [{ items: a.order.map(uri => ({ uri })) }] }
+         : { uri: a.contextUri };
+-      return need().player.play(context, {}, extra);
++      return mspStarted(() => need().player.play(context, {}, extra));
++    },
++    'player.pause': () => {
++      clearTimeout(mspStartWatch);
++      return need().player.pause();
+     },
+-    'player.pause': () => need().player.pause(),
+-    'player.resume': () => need().player.resume(),
++    'player.resume': () => mspStarted(() => need().player.resume()),
+     'player.seek': a => need().player.seekTo(a.positionMs),
+     'player.next': () => need().player.skipToNext(),
+     'player.previous': () => need().player.skipToPrevious(),

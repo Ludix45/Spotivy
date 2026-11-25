@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="other">%1$s playlist</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="other">%1$s lagu</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Maju cepat %d detik</item>
+        <item quantity="other">Maju cepat %d detik</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Mundur %d detik</item>
+        <item quantity="other">Mundur %d detik</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="other">%1$d lagu</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="other">%1$,d kali disimpan</item>
+    </plurals>
+</resources>

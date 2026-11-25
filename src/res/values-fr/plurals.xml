@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s playlist</item>
+        <item quantity="other">%1$s playlists</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s titre</item>
+        <item quantity="other">%1$s titres</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d titre de %2$s</item>
+        <item quantity="other">%1$d titres de %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Avancer de %d seconde</item>
+        <item quantity="other">Avancer de %d secondes</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Revenir en arrière de %d seconde</item>
+        <item quantity="other">Revenir en arrière de %d secondes</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d vote positif</item>
+        <item quantity="other">%1$d votes positifs</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d titre</item>
+        <item quantity="other">%1$d titres</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d titre</item>
+        <item quantity="other">%d titres</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d abonné</item>
+        <item quantity="other">%1$d abonnés</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d sauvegarde</item>
+        <item quantity="other">%1$,d sauvegardes</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">%d titre ajouté à la file</item>
+        <item quantity="other">%d titres ajoutés à la file</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d titre sera lu ensuite</item>
+        <item quantity="other">%d titres seront lus ensuite</item>
+    </plurals>
+</resources>

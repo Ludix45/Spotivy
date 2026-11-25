@@ -1,0 +1,176 @@
+.class public final Lbq3;
+.super Lih8;
+.source "SourceFile"
+
+# interfaces
+.implements Lku2;
+
+
+# instance fields
+.field final synthetic $fieldFocus:Ljo2;
+
+.field final synthetic $listState:Lbf4;
+
+.field private synthetic L$0:Ljava/lang/Object;
+
+.field label:I
+
+
+# direct methods
+.method public constructor <init>(Lbf4;Ljo2;Lt51;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lbf4;",
+            "Ljo2;",
+            "Lt51;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lbq3;->$listState:Lbf4;
+
+    iput-object p2, p0, Lbq3;->$fieldFocus:Ljo2;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lih8;-><init>(ILt51;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lt51;)Lt51;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lt51;",
+            ")",
+            "Lt51;"
+        }
+    .end annotation
+
+    new-instance v0, Lbq3;
+
+    iget-object v1, p0, Lbq3;->$listState:Lbf4;
+
+    iget-object p0, p0, Lbq3;->$fieldFocus:Ljo2;
+
+    invoke-direct {v0, v1, p0, p2}, Lbq3;-><init>(Lbf4;Ljo2;Lt51;)V
+
+    iput-object p1, v0, Lbq3;->L$0:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 13
+    check-cast p1, Ls71;
+
+    check-cast p2, Lt51;
+
+    invoke-virtual {p0, p1, p2}, Lbq3;->invoke(Ls71;Lt51;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Ls71;Lt51;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ls71;",
+            "Lt51;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lbq3;->create(Ljava/lang/Object;Lt51;)Lt51;
+
+    move-result-object p0
+
+    check-cast p0, Lbq3;
+
+    sget-object p1, Lb29;->a:Lb29;
+
+    invoke-virtual {p0, p1}, Lbq3;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget-object v0, p0, Lbq3;->L$0:Ljava/lang/Object;
+
+    check-cast v0, Ls71;
+
+    sget-object v1, Lt71;->COROUTINE_SUSPENDED:Lt71;
+
+    iget v2, p0, Lbq3;->label:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-eq v2, v4, :cond_0
+
+    const-string p0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-static {p0}, Lrs1;->q(Ljava/lang/String;)V
+
+    return-object v3
+
+    :cond_0
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lgj8;->f:Ltj7;
+
+    new-instance v2, Laq3;
+
+    iget-object v5, p0, Lbq3;->$listState:Lbf4;
+
+    iget-object v6, p0, Lbq3;->$fieldFocus:Ljo2;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v2, v0, v5, v6, v7}, Laq3;-><init>(Ls71;Lbf4;Ljo2;B)V
+
+    iput-object v3, p0, Lbq3;->L$0:Ljava/lang/Object;
+
+    iput v4, p0, Lbq3;->label:I
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1, v2, p0}, Ltj7;->l(Ltj7;Lel2;Lt51;)Lt71;
+
+    move-result-object p0
+
+    if-ne p0, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    invoke-static {}, Lv91;->g()V
+
+    return-object v3
+.end method

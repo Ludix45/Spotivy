@@ -1,0 +1,393 @@
+.class Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;
+.super Lorg/mozilla/javascript/SlotMapContainer;
+.source "SourceFile"
+
+
+# static fields
+.field static final synthetic $assertionsDisabled:Z
+
+
+# instance fields
+.field private final lock:Ljava/util/concurrent/locks/StampedLock;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lorg/mozilla/javascript/SlotMapContainer;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-direct {v0}, Ljava/util/concurrent/locks/StampedLock;-><init>()V
+
+    iput-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 11
+    invoke-direct {p0, p1}, Lorg/mozilla/javascript/SlotMapContainer;-><init>(I)V
+
+    .line 12
+    new-instance p1, Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-direct {p1}, Ljava/util/concurrent/locks/StampedLock;-><init>()V
+
+    iput-object p1, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public add(Lorg/mozilla/javascript/Slot;)V
+    .locals 3
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->writeLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    invoke-virtual {p0}, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->checkMapSize()V
+
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2, p1}, Lorg/mozilla/javascript/SlotMap;->add(Lorg/mozilla/javascript/Slot;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    throw p1
+.end method
+
+.method public checkMapSize()V
+    .locals 0
+
+    invoke-super {p0}, Lorg/mozilla/javascript/SlotMapContainer;->checkMapSize()V
+
+    return-void
+.end method
+
+.method public compute(Ljava/lang/Object;ILorg/mozilla/javascript/SlotMap$SlotComputer;)Lorg/mozilla/javascript/Slot;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<S:",
+            "Lorg/mozilla/javascript/Slot;",
+            ">(",
+            "Ljava/lang/Object;",
+            "I",
+            "Lorg/mozilla/javascript/SlotMap$SlotComputer<",
+            "TS;>;)TS;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->writeLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2, p1, p2, p3}, Lorg/mozilla/javascript/SlotMap;->compute(Ljava/lang/Object;ILorg/mozilla/javascript/SlotMap$SlotComputer;)Lorg/mozilla/javascript/Slot;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    throw p1
+.end method
+
+.method public dirtySize()I
+    .locals 0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {p0}, Lorg/mozilla/javascript/SlotMap;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public isEmpty()Z
+    .locals 4
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->tryOptimisticRead()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2}, Lorg/mozilla/javascript/SlotMap;->isEmpty()Z
+
+    move-result v2
+
+    iget-object v3, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->validate(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v2
+
+    :cond_0
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->readLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2}, Lorg/mozilla/javascript/SlotMap;->isEmpty()Z
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    return v2
+
+    :catchall_0
+    move-exception v2
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    throw v2
+.end method
+
+.method public iterator()Ljava/util/Iterator;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Lorg/mozilla/javascript/Slot;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public modify(Ljava/lang/Object;II)Lorg/mozilla/javascript/Slot;
+    .locals 3
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->writeLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    invoke-virtual {p0}, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->checkMapSize()V
+
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2, p1, p2, p3}, Lorg/mozilla/javascript/SlotMap;->modify(Ljava/lang/Object;II)Lorg/mozilla/javascript/Slot;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockWrite(J)V
+
+    throw p1
+.end method
+
+.method public query(Ljava/lang/Object;I)Lorg/mozilla/javascript/Slot;
+    .locals 4
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->tryOptimisticRead()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2, p1, p2}, Lorg/mozilla/javascript/SlotMap;->query(Ljava/lang/Object;I)Lorg/mozilla/javascript/Slot;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->validate(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object v2
+
+    :cond_0
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->readLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2, p1, p2}, Lorg/mozilla/javascript/SlotMap;->query(Ljava/lang/Object;I)Lorg/mozilla/javascript/Slot;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    throw p1
+.end method
+
+.method public readLock()J
+    .locals 2
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/StampedLock;->readLock()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public size()I
+    .locals 4
+
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->tryOptimisticRead()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2}, Lorg/mozilla/javascript/SlotMap;->size()I
+
+    move-result v2
+
+    iget-object v3, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->validate(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v2
+
+    :cond_0
+    iget-object v0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/StampedLock;->readLock()J
+
+    move-result-wide v0
+
+    :try_start_0
+    iget-object v2, p0, Lorg/mozilla/javascript/SlotMapContainer;->map:Lorg/mozilla/javascript/SlotMap;
+
+    invoke-interface {v2}, Lorg/mozilla/javascript/SlotMap;->size()I
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    return v2
+
+    :catchall_0
+    move-exception v2
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    throw v2
+.end method
+
+.method public unlockRead(J)V
+    .locals 0
+
+    iget-object p0, p0, Lorg/mozilla/javascript/ThreadSafeSlotMapContainer;->lock:Ljava/util/concurrent/locks/StampedLock;
+
+    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/locks/StampedLock;->unlockRead(J)V
+
+    return-void
+.end method

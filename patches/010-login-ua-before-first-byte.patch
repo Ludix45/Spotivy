@@ -1,0 +1,74 @@
+--- a/smali/pa9.smali
++++ b/smali/pa9.smali
+@@ -2531,6 +2531,35 @@
+ 
+     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+ 
++    # login: UA mobile coerente col motore (senza "wv") fin dalla prima richiesta.
++    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
++
++    move-result-object v10
++
++    invoke-virtual {v0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
++
++    move-result-object v11
++
++    invoke-static {v11}, Landroid/webkit/WebSettings;->getDefaultUserAgent(Landroid/content/Context;)Ljava/lang/String;
++
++    move-result-object v11
++
++    const-string v12, "; wv"
++
++    const-string v9, ""
++
++    invoke-virtual {v11, v12, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v11
++
++    const-string v12, "Version/4.0 "
++
++    invoke-virtual {v11, v12, v9}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
++
++    move-result-object v11
++
++    invoke-virtual {v10, v11}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
++
+     return-object v0
+ .end method
+ 
+--- a/smali/oa9.smali
++++ b/smali/oa9.smali
+@@ -6,6 +6,8 @@
+ # static fields
+ .field public static z:Z
+ 
++.field public static y:Z
++
+ 
+ # instance fields
+ .field public final synthetic a:Lpa9;
+@@ -239,9 +241,24 @@
+ 
+     invoke-virtual {v1, v0}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
+ 
++    sget-boolean v0, Loa9;->y:Z
++
++    if-nez v0, :login_ua_done
++
++    const/4 v0, 0x1
++
++    sput-boolean v0, Loa9;->y:Z
++
++    invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
++
++    :login_ua_done
+     goto :goto_0
+ 
+     :cond_0
++    const/4 v0, 0x0
++
++    sput-boolean v0, Loa9;->y:Z
++
+     iget-object v0, p0, Loa9;->a:Lpa9;
+ 
+     iget-object v0, v0, Lpa9;->x:Lti2;

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="add_to_playlist_folder_subtitle_playlists_count">
+        <item quantity="one">%1$s плейлист</item>
+        <item quantity="few">%1$s плейлиста</item>
+        <item quantity="many">%1$s плейлистов</item>
+        <item quantity="other">%1$s плейлиста</item>
+    </plurals>
+    <plurals name="add_to_playlist_subtitle_songs_count">
+        <item quantity="one">%1$s трек</item>
+        <item quantity="few">%1$s трека</item>
+        <item quantity="many">%1$s треков</item>
+        <item quantity="other">%1$s трека</item>
+    </plurals>
+    <plurals name="artist_liked_songs_count">
+        <item quantity="one">%1$d трек • %2$s</item>
+        <item quantity="few">%1$d трека • %2$s</item>
+        <item quantity="many">%1$d треков • %2$s</item>
+        <item quantity="other">%1$d трека • %2$s</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду вперед</item>
+        <item quantity="few">Перемотать на %d секунды вперед</item>
+        <item quantity="many">Перемотать на %d секунд вперед</item>
+        <item quantity="other">Перемотать на %d секунды вперед</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду назад</item>
+        <item quantity="few">Перемотать на %d секунды назад</item>
+        <item quantity="many">Перемотать на %d секунд назад</item>
+        <item quantity="other">Перемотать на %d секунды назад</item>
+    </plurals>
+    <plurals name="immersive_genius_upvotes">
+        <item quantity="one">%1$d голос «за»</item>
+        <item quantity="few">%1$d голоса «за»</item>
+        <item quantity="many">%1$d голосов «за»</item>
+        <item quantity="other">%1$d голоса «за»</item>
+    </plurals>
+    <plurals name="liked_songs_header_metadata_text">
+        <item quantity="one">%1$d трек</item>
+        <item quantity="few">%1$d трека</item>
+        <item quantity="many">%1$d треков</item>
+        <item quantity="other">%1$d трека</item>
+    </plurals>
+    <plurals name="local_files_count">
+        <item quantity="one">%d трек</item>
+        <item quantity="few">%d трека</item>
+        <item quantity="many">%d треков</item>
+        <item quantity="other">%d трека</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="one">%1$d подписчик</item>
+        <item quantity="few">%1$d подписчика</item>
+        <item quantity="many">%1$d подписчиков</item>
+        <item quantity="other">%1$d подписчика</item>
+    </plurals>
+    <plurals name="profile_list_item_saves_count">
+        <item quantity="one">%1$,d сохранение</item>
+        <item quantity="few">%1$,d сохранения</item>
+        <item quantity="many">%1$,d сохранений</item>
+        <item quantity="other">%1$,d сохранения</item>
+    </plurals>
+    <plurals name="queue_list_added">
+        <item quantity="one">%d трек добавлен в очередь</item>
+        <item quantity="few">%d трека добавлены в очередь</item>
+        <item quantity="many">%d треков добавлено в очередь</item>
+        <item quantity="other">%d трека добавлено в очередь</item>
+    </plurals>
+    <plurals name="queue_list_next">
+        <item quantity="one">%d трек заиграет следующим</item>
+        <item quantity="few">%d трека заиграют следующими</item>
+        <item quantity="many">%d треков заиграют следующими</item>
+        <item quantity="other">%d трека заиграют следующими</item>
+    </plurals>
+</resources>

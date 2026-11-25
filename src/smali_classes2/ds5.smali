@@ -1,0 +1,174 @@
+.class public final Lds5;
+.super Lih8;
+.source "SourceFile"
+
+# interfaces
+.implements Lku2;
+
+
+# instance fields
+.field final synthetic $added:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lxr5;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field label:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;Lt51;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lxr5;",
+            ">;",
+            "Lt51;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lds5;->$added:Ljava/util/List;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lih8;-><init>(ILt51;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lt51;)Lt51;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lt51;",
+            ")",
+            "Lt51;"
+        }
+    .end annotation
+
+    new-instance p1, Lds5;
+
+    iget-object p0, p0, Lds5;->$added:Ljava/util/List;
+
+    invoke-direct {p1, p0, p2}, Lds5;-><init>(Ljava/util/List;Lt51;)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 13
+    check-cast p1, Ls71;
+
+    check-cast p2, Lt51;
+
+    invoke-virtual {p0, p1, p2}, Lds5;->invoke(Ls71;Lt51;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invoke(Ls71;Lt51;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ls71;",
+            "Lt51;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lds5;->create(Ljava/lang/Object;Lt51;)Lt51;
+
+    move-result-object p0
+
+    check-cast p0, Lds5;
+
+    sget-object p1, Lb29;->a:Lb29;
+
+    invoke-virtual {p0, p1}, Lds5;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Lt71;->COROUTINE_SUSPENDED:Lt71;
+
+    iget v0, p0, Lds5;->label:I
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Lty6;->b(Ljava/lang/Object;)V
+
+    iget-object p0, p0, Lds5;->$added:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxr5;
+
+    sget-object v0, Lxs5;->a:Lxs5;
+
+    sget-object v0, Lxs5;->d:Lfq7;
+
+    iget-object v1, p1, Lxr5;->a:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lft5;->a:Lft5;
+
+    sget-object v0, Lft5;->e:Lfq7;
+
+    iget-object p1, p1, Lxr5;->a:Ljava/lang/String;
+
+    sget-object v1, Lbt5;->a:Lbt5;
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lb29;->a:Lb29;
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-static {p0}, Lrs1;->q(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
